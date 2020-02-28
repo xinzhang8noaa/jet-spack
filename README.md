@@ -3,28 +3,20 @@
   Configure JET with the software packages for JEDI 
 
 
-# **For users**
-
-## Installation
-
-  - install spack
-  
-    ```
-    git clone https://github.com/spack/spack.git
-    ```
+# **For general users**
 
 ## Configurate spack
 
   - for bash users, edit `~/.bashrc` etc.
   
     ```
-    export SPACK_ROOT=/path/of/git/cloned/spack
+    export SPACK_ROOT=/misc/whome/Xin.L.Zhang/spack
     . ${SPACK_ROOT}/share/spack/setup-env.sh
     ```
 
   - for csh/tcsh users, edit , edit `~/.cshrc` etc.
     ```
-    setenv SPACK_ROOT /path/of/git/cloned/spack
+    setenv SPACK_ROOT /misc/whome/Xin.L.Zhang/spack
     source ${SPACK_ROOT}/share/spack/setup-env.csh
     ```
 

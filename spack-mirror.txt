@@ -65,3 +65,4 @@ mpfr@3.1.6
 isl@0.20   
 mpc@1.1.0  
 fftw@3.3.8
+parallel-netcdf@1.12.1

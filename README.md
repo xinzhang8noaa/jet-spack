@@ -38,7 +38,7 @@
     module load eigen-3.3.7-intel-18.0.5-k4bnahc
     module load fftw-3.3.8-intel-18.0.5-r6gmk32
     ```
-  - set `NETCDF/PNETCDF`
+  - set `NETCDF/PNETCDF` ( for WRF users)
   
     ```
     setenv NETCDF `spack location -i netcdf-fortran@4.5.2%intel@18.0.5`
@@ -65,7 +65,7 @@
     or
     export LAPACK=`spack location -i netlib-lapack@3.8.0%gcc@9.2.0` for bash
     ```
-  - set `NETCDF/PNETCDF`
+  - set `NETCDF/PNETCDF` ( for WRF Users)
   
     ```
     setenv NETCDF `spack location -i netcdf-fortran@4.5.2%gcc@9.2.0`

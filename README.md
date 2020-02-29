@@ -88,6 +88,7 @@
   - Intel compiler
 
     - [x] module load intel/18.0.5.274
+    - [x] spack compiler find
     - [x] module load impi/2018.4.274
     - [x] module load cmake/3.6.1
   
@@ -101,6 +102,7 @@
   - GNU compiler
   
     - [x] module load gnu/9.2.0
+    - [x] spack compiler find
     - [x] module load openmpi/3.1.4
     - [x] module load cmake/3.6.1
     

@@ -37,7 +37,13 @@
     or
     export LAPACK=`spack location -i netlib-lapack` for bash
     ```
-  
+## For WRF users:
+
+    setenv NETCDF `spack location -i netcdf-fortran`
+    setenv NETCDF_C `spack location -i netcdf-c`
+    spack load -r parallel-netcdf@1.12.1
+    setenv PNETCDF `spack location -i parallel-netcdf@1.12.1`
+
 ---
 ---
 

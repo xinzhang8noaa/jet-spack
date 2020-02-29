@@ -22,6 +22,31 @@
 
 ## Load packages
 
+  - [x] For Intel compiler version 18.0.5
+  
+    append following lines to `~/.bashrc` or `~/.cshrc` or ....:
+   
+    ```
+    module purge
+    module load intel/18.0.5.274
+    module load impi/2018.4.274
+    module load cmake/3.6.1
+    
+    # spack load has some problem, so use module load
+    module load netcdf-c-4.7.3-intel-18.0.5-wbmurwb
+    module load netcdf-fortran-4.5.2-intel-18.0.5-zxprvut
+    module load eigen-3.3.7-intel-18.0.5-k4bnahc
+    module load fftw-3.3.8-intel-18.0.5-r6gmk32
+    ```
+    - set `NETCDF/PNETCDF`
+  
+    ```
+    setenv NETCDF `spack location -i netcdf-fortran@4.5.2%intel@18.0.5`
+    setenv NETCDF_C `spack location -i netcdf-c@4.7.3%intel@18.0.5`
+    module load parallel-netcdf-1.12.1-intel-18.0.5-zx5tjzg
+    setenv PNETCDF `spack location -i parallel-netcdf@1.12.1%%intel@18.0.5`
+    ```
+    
   - [x] For GNU compiler version 9.2.0
   
     append following lines to `~/.bashrc` or `~/.cshrc` or ....:
@@ -40,8 +65,6 @@
     or
     export LAPACK=`spack location -i netlib-lapack@3.8.0%gcc@9.2.0` for bash
     ```
-## For WRF users:
-
   - set `NETCDF/PNETCDF`
   
     ```
@@ -58,12 +81,32 @@
 
 ## Prepare mirror on a platform with *FULL* internet access
 
+  - spack mirror add jedi file:///misc/whome/Xin.L.Zhang/mirror
+
 ## Installation
 
+  - Intel compiler
 
-  - [x] spack install eigen+fftw arch=haswell
-  - [x] spack install boost arch=haswell
-  - [x] spack install netcdf-fortran arch=haswell
-  - [x] spack install netlib-lapack arch=haswell
+    - [x] module load intel/18.0.5.274
+    - [x] module load impi/2018.4.274
+    - [x] module load cmake/3.6.1
   
-  - [x] spack install parallel-netcdf arch=haswell
+    - [x] spack install eigen+fftw %intel@18.0.5 arch=haswell
+    - [x] spack install boost arch=haswell
+    - [x] spack install netcdf-fortran %intel@18.0.5 arch=haswell
+  
+    - [x] spack install parallel-netcdf arch=haswell
+
+
+  - GNU compiler
+  
+    - [x] module load gnu/9.2.0
+    - [x] module load openmpi/3.1.4
+    - [x] module load cmake/3.6.1
+    
+    - [x] spack install eigen+fftw %gcc@9.2.0 arch=haswell
+    - [x] spack install boost %gcc@9.2.0 arch=haswell
+    - [x] spack install netcdf-fortran %gcc@9.2.0 arch=haswell
+    - [x] spack install netlib-lapack %gcc@9.2.0 arch=haswell
+  
+    - [x] spack install parallel-netcdf %gcc@9.2.0 arch=haswell

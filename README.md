@@ -35,6 +35,7 @@
     # spack load has some problem, so use module load
     module load netcdf-c-4.7.3-intel-18.0.5-wbmurwb
     module load netcdf-fortran-4.5.2-intel-18.0.5-zxprvut
+    module load hdf5-1.10.6-intel-18.0.5-gynln47
     module load eigen-3.3.7-intel-18.0.5-k4bnahc
     module load fftw-3.3.8-intel-18.0.5-r6gmk32
     ```

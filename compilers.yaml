@@ -1,0 +1,40 @@
+compilers:
+- compiler:
+    paths:
+      cc: /apps/gnu/gcc-9.2.0/bin/gcc
+      cxx: /apps/gnu/gcc-9.2.0/bin/g++
+      f77: /apps/gnu/gcc-9.2.0/bin/gfortran
+      fc: /apps/gnu/gcc-9.2.0/bin/gfortran
+    operating_system: centos7
+    target: x86_64
+    environment: {unset: []}
+    extra_rpaths: []
+    flags: {}
+    modules: [gnu/9.2.0]
+    spec: gcc@9.2.0
+- compiler:
+    paths:
+      cc: /apps/gnu/gcc-9.2.0/bin/gcc
+      cxx: /apps/gnu/gcc-9.2.0/bin/g++
+      f77: /apps/nag/6.0/bin/nagfor
+      fc: /apps/nag/6.0/bin/nagfor
+    operating_system: centos7
+    target: x86_64
+    modules: [nag/6.0, gnu/9.2.0]
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    spec: nag@6.0
+- compiler:
+    paths:
+      cc: /apps/intel/parallel_studio_xe_2018.4.057/compilers_and_libraries_2018/linux/bin/intel64/icc
+      cxx: /apps/intel/parallel_studio_xe_2018.4.057/compilers_and_libraries_2018/linux/bin/intel64/icpc
+      f77: /apps/intel/parallel_studio_xe_2018.4.057/compilers_and_libraries_2018/linux/bin/intel64/ifort
+      fc: /apps/intel/parallel_studio_xe_2018.4.057/compilers_and_libraries_2018/linux/bin/intel64/ifort
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    spec: intel@18.0.5

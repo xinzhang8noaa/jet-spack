@@ -1,0 +1,25 @@
+packages:
+  all:
+    compiler: [gcc, intel, nag]
+    providers:
+      mpi: [openmpi, intel-mpi]
+  openmpi:
+    paths:
+      openmpi@3.1.4%gcc@9.2.0: /apps/openmpi/3.1.4/gnu/gcc-9.2.0
+    buildable: False
+  intel-mpi:
+    paths:
+      intel-mpi@2018.4.274%intel@18.0.5: /apps/intel/compilers_and_libraries_2018.5.274/linux/mpi/intel64
+    buildable: False
+  cmake:
+    paths:
+      cmake@3.6.1: /apps/cmake/3.16.1
+    buildable: False
+  bzip2:
+    paths:
+      bzip2@1.0.6: /
+    buildable: False
+  m4:
+    paths:
+      m4@1.4.16: /
+    buildable: False

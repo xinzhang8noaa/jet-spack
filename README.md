@@ -5,7 +5,7 @@
 
 # **For general users**
 
-## Configurate spack
+1. ## Configurate spack
 
   - for bash users, edit `~/.bashrc` etc.
   
@@ -20,7 +20,7 @@
     source ${SPACK_ROOT}/share/spack/setup-env.csh
     ```
 
-## Load packages
+2. ## Load packages
 
   - [x] For Intel compiler version 18.0.5
   
@@ -38,7 +38,7 @@
     module load eigen-3.3.7-intel-18.0.5-k4bnahc
     module load fftw-3.3.8-intel-18.0.5-r6gmk32
     ```
-    - set `NETCDF/PNETCDF`
+  - set `NETCDF/PNETCDF`
   
     ```
     setenv NETCDF `spack location -i netcdf-fortran@4.5.2%intel@18.0.5`
@@ -79,11 +79,11 @@
 
 # **For developers**
 
-## Prepare mirror on a platform with *FULL* internet access
+1. ## Prepare mirror on a platform with *FULL* internet access
 
   - spack mirror add jedi file:///misc/whome/Xin.L.Zhang/mirror
 
-## Installation
+2. ## Installation
 
   - Intel compiler
 

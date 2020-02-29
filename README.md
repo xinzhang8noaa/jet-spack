@@ -38,6 +38,10 @@
     module load hdf5-1.10.6-intel-18.0.5-gynln47
     module load eigen-3.3.7-intel-18.0.5-k4bnahc
     module load fftw-3.3.8-intel-18.0.5-r6gmk32
+    # spack has problem to build boost, just use the gnu version
+    module load boost-1.72.0-gcc-9.2.0-i2w2xrm
+    # Set the path of MKL
+    setenv MKL_PATH /apps/intel/parallel_studio_xe_2018.4.057/compilers_and_libraries_2018/linux/mkl
     ```
   - set `NETCDF/PNETCDF` ( for WRF users)
   

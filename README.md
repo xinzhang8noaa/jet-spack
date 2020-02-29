@@ -5,7 +5,7 @@
 
 # **For general users**
 
-1. ## Configurate spack
+  ## Configurate spack
 
   - for bash users, edit `~/.bashrc` etc.
   
@@ -20,7 +20,7 @@
     source ${SPACK_ROOT}/share/spack/setup-env.csh
     ```
 
-2. ## Load packages
+  ## Load packages
 
   - [x] For Intel compiler version 18.0.5
   
@@ -79,11 +79,11 @@
 
 # **For developers**
 
-1. ## Prepare mirror on a platform with *FULL* internet access
+  ## Prepare mirror on a platform with *FULL* internet access
 
   - spack mirror add jedi file:///misc/whome/Xin.L.Zhang/mirror
 
-2. ## Installation
+  ## Installation
 
   - Intel compiler
 
@@ -95,7 +95,7 @@
     - [x] spack install boost arch=haswell
     - [x] spack install netcdf-fortran %intel@18.0.5 arch=haswell
   
-    - [x] spack install parallel-netcdf arch=haswell
+    - [x] spack install parallel-netcdf %intel@18.0.5 arch=haswell
 
 
   - GNU compiler

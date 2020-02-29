@@ -27,25 +27,28 @@
     append following lines to `~/.bashrc` or `~/.cshrc` or ....:
    
     ```
-    spack load -r gcc@9.2.0
-    spack load -r netcdf-fortran%gcc@9.2.0
-    spack load -r cmake%gcc@9.2.0
-    spack load -r eigen%gcc@9.2.0
-    spack load -r boost%gcc@9.2.0
-    spack load -r netlib-lapack%gcc@9.2.0
-    setenv LAPACK `spack location -i netlib-lapack` for csh/tcsh
+    module load gnu/9.2.0
+    module load openmpi/3.1.4
+    module load cmake/3.6.1
+    
+    spack load -r netcdf-fortran@4.5.2%gcc@9.2.0
+    spack load -r eigen@3.3.7%gcc@9.2.0
+    spack load -r boost@1.72.0%gcc@9.2.0
+    spack load -r netlib-lapack@3.8.0%gcc@9.2.0
+    spack load -r fftw@3.3.8%gcc@9.2.0
+    setenv LAPACK `spack location -i netlib-lapack@3.8.0%gcc@9.2.0` for csh/tcsh
     or
-    export LAPACK=`spack location -i netlib-lapack` for bash
+    export LAPACK=`spack location -i netlib-lapack@3.8.0%gcc@9.2.0` for bash
     ```
 ## For WRF users:
 
   - set `NETCDF/PNETCDF`
   
     ```
-    setenv NETCDF `spack location -i netcdf-fortran`
-    setenv NETCDF_C `spack location -i netcdf-c`
-    spack load -r parallel-netcdf@1.12.1
-    setenv PNETCDF `spack location -i parallel-netcdf@1.12.1`
+    setenv NETCDF `spack location -i netcdf-fortran@4.5.2%gcc@9.2.0`
+    setenv NETCDF_C `spack location -i netcdf-c@4.7.3%gcc@9.2.0`
+    spack load -r parallel-netcdf@1.12.1%gcc@9.2.0
+    setenv PNETCDF `spack location -i parallel-netcdf@1.12.1%gcc@9.2.0`
     ```
 
 ---
@@ -57,9 +60,10 @@
 
 ## Installation
 
-  - [x] spack install gcc@9.2.0
-  - [x] spack load -r gcc@9.2.0
-  - [x] spack install netcdf-fortran%gcc@9.2.0
-  - [x] spack install boost%gcc@9.2.0
-  - [x] spack install eigen%gcc@9.2.0
-  - [x] spack install netlib-lapack%gcc@9.2.0
+
+  - [x] spack install eigen+fftw arch=haswell
+  - [x] spack install boost arch=haswell
+  - [x] spack install netcdf-fortran arch=haswell
+  - [x] spack install netlib-lapack arch=haswell
+  
+  - [x] spack install parallel-netcdf arch=haswell

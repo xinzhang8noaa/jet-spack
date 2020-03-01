@@ -98,10 +98,7 @@
     - [x] module load cmake/3.6.1
   
     - [x] spack install eigen+fftw %intel@18.0.5 arch=haswell
-    - [x] spack install boost arch=haswell
-    - [x] spack install netcdf-fortran %intel@18.0.5 arch=haswell
-  
-    - [x] spack install parallel-netcdf %intel@18.0.5 arch=haswell
+    - [x] spack install netcdf-fortran%intel@18.0.5 arch=haswell ^netcdf-c+parallel-netcdf arch=haswell ^hdf5+fortran+threadsafe+szip arch=haswell
 
 
   - GNU compiler
@@ -112,7 +109,7 @@
     - [x] module load cmake/3.6.1
     
     - [x] spack install eigen+fftw %gcc@9.2.0 arch=haswell
-    - [x] spack install boost %gcc@9.2.0 arch=haswell
+    - [x] spack install boost%gcc@9.2.0 +pic arch=haswell
     - [x] spack install netcdf-fortran%gcc@9.2.0 arch=haswell ^netcdf-c+parallel-netcdf arch=haswell ^hdf5+fortran+threadsafe+szip arch=haswell
     - [x] spack install netlib-lapack %gcc@9.2.0 arch=haswell
  

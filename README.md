@@ -86,10 +86,12 @@
 
   ## Prepare mirror on a platform with *FULL* internet access
 
-  - spack mirror add jedi file:///misc/whome/Xin.L.Zhang/mirror
-
+  - spack mirror create -f spack-mirror.txt
+  
   ## Installation
 
+  - spack mirror add jedi file:///misc/whome/Xin.L.Zhang/mirror
+  
   - Intel compiler
 
     - [x] module load intel/18.0.5.274

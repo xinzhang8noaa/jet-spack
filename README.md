@@ -113,6 +113,6 @@
     
     - [x] spack install eigen+fftw %gcc@9.2.0 arch=haswell
     - [x] spack install boost %gcc@9.2.0 arch=haswell
-    - [x] spack install netcdf-fortran%gcc@9.2.0 arch=haswell ^netcdf-c+parallel-netcdf arch=haswell ^hdf5+fortran arch=haswell
+    - [x] spack install netcdf-fortran%gcc@9.2.0 arch=haswell ^netcdf-c+parallel-netcdf arch=haswell ^hdf5+fortran+threadsafe+szip arch=haswell
     - [x] spack install netlib-lapack %gcc@9.2.0 arch=haswell
  

@@ -33,13 +33,13 @@
     module load cmake/3.6.1
     
     # spack load has some problem, so use module load
-    module load netcdf-c-4.7.3-intel-18.0.5-wbmurwb
-    module load netcdf-fortran-4.5.2-intel-18.0.5-zxprvut
-    module load hdf5-1.10.6-intel-18.0.5-gynln47
+    module load netcdf-c-4.7.3-intel-18.0.5-kt44h4n
+    module load netcdf-fortran-4.5.2-intel-18.0.5-6yb7i4q
+    module load hdf5-1.10.6-intel-18.0.5-v2zqemo
     module load eigen-3.3.7-intel-18.0.5-k4bnahc
     module load fftw-3.3.8-intel-18.0.5-r6gmk32
     # spack has problem to build boost, just use the gnu version
-    module load boost-1.72.0-gcc-9.2.0-i2w2xrm
+    module load boost-1.72.0-gcc-9.2.0-ehs22uh
     # Set the path of MKL
     setenv MKL_PATH /apps/intel/parallel_studio_xe_2018.4.057/compilers_and_libraries_2018/linux/mkl
     ```
